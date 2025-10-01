@@ -108,7 +108,7 @@
             --bg-secondary: #071A2E;
             --bg-card: #2A2F3A;
             --text-primary: #F3F6F9;
-            --text-secondary: #1E222A;
+            --text-secondary: #F3F6F9;
             --accent-primary: #00B7C2;
             --accent-secondary: #FF7A00;
             --border-color: #404040;
@@ -154,8 +154,8 @@
         
         .theme-toggle {
             background: transparent;
-            border: 2px solid #00B7C2;
-            color: #00B7C2;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
             padding: 0.5rem;
             border-radius: 6px;
             cursor: pointer;
@@ -169,8 +169,8 @@
         }
         
         .theme-toggle:hover {
-            background: #00B7C2;
-            color: #071A2E;
+            background: var(--accent-primary);
+            color: var(--bg-secondary);
         }
         
         .logo {
@@ -270,8 +270,8 @@
         }
 
         .btn-secondary:hover {
-            background: #00B7C2;
-            color: #071A2E;
+            background: var(--accent-primary);
+            color: var(--bg-secondary);
         }
 
         .email-form {
@@ -343,14 +343,14 @@
         
         .section h2 {
             font-size: 2.5rem;
-            color: #071A2E;
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             text-align: center;
         }
         
         .section h3 {
             font-size: 2rem;
-            color: #071A2E;
+            color: var(--text-primary);
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -416,10 +416,11 @@
         }
         
         .testimonial {
-            background: #F3F6F9;
+            background: var(--bg-primary);
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid #00B7C2;
+            border-left: 4px solid var(--accent-primary);
+            transition: background-color 0.3s ease;
         }
         
         .testimonial p {
