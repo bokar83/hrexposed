@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Exposed - HR without the corporate spin</title>
+    <meta name="description" content="The truths HR won't tell you. Get insider answers that protect your career and help you win reviews, interviews, and tough conversations.">
+    <link rel="canonical" href="https://hrexposed.net">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hrexposed.net">
+    <meta property="og:title" content="HR Exposed - HR without the corporate spin">
+    <meta property="og:description" content="The truths HR won't tell you. Get insider answers that protect your career and help you win reviews, interviews, and tough conversations.">
+    <meta property="og:image" content="https://hrexposed.net/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hrexposed.net">
+    <meta property="twitter:title" content="HR Exposed - HR without the corporate spin">
+    <meta property="twitter:description" content="The truths HR won't tell you. Get insider answers that protect your career and help you win reviews, interviews, and tough conversations.">
+    <meta property="twitter:image" content="https://hrexposed.net/og-image.jpg">
+    
+    <!-- JSON-LD FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is this legal advice",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. This is educational HR coaching. Laws vary by state and country. For legal advice, talk to a lawyer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is this for",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Employees and job seekers who want clear, practical HR guidance for reviews, interviews, and tricky situations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens in a 30-minute call",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We focus on your top three issues. You leave with a one-page plan and exact phrases to use."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer refunds",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Calls are non-refundable once delivered. If a booking issue occurs, we will make it right."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if I am not ready to book",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Join the waitlist. You will get one practical tip and a reminder when new call slots open."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1E222A;
+            background-color: #F3F6F9;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            background: #071A2E;
+            color: #F3F6F9;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00B7C2;
+        }
+        
+        .header-cta {
+            background: #FF7A00;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        
+        .header-cta:hover {
+            background: #e66a00;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #071A2E 0%, #00B7C2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-primary {
+            background: #FF7A00;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background: #e66a00;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #071A2E;
+        }
+        
+        .micro-trust {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            color: #071A2E;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .section h3 {
+            font-size: 2rem;
+            color: #071A2E;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .enemy-statement {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .enemy-statement p {
+            font-size: 1.2rem;
+            color: #1E222A;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .value-bullets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .bullet {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .bullet h4 {
+            font-size: 1.5rem;
+            color: #00B7C2;
+            margin-bottom: 1rem;
+        }
+        
+        .bullet p {
+            color: #1E222A;
+            font-size: 1.1rem;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial {
+            background: #F3F6F9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #00B7C2;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #1E222A;
+        }
+        
+        .testimonial .author {
+            font-weight: 600;
+            color: #00B7C2;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-item summary {
+            padding: 1.5rem;
+            background: #F3F6F9;
+            cursor: pointer;
+            font-weight: 600;
+            color: #071A2E;
+            list-style: none;
+            position: relative;
+        }
+        
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #00B7C2;
+        }
+        
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-item p {
+            padding: 1.5rem;
+            color: #1E222A;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: #071A2E;
+            color: #F3F6F9;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-nav {
+            margin-bottom: 2rem;
+        }
+        
+        .footer-nav a {
+            color: #00B7C2;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-nav a:hover {
+            color: #F3F6F9;
+        }
+        
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .value-bullets {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                margin-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">HR Exposed</div>
+                <a href="<REPLACE_WITH_BOOKING_URL>" class="header-cta" aria-label="Book a 30-minute HR prep call">Book a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" role="main">
+        <div class="container">
+            <h1>HR without the corporate spin</h1>
+            <p>The truths HR won't tell you. Get insider answers that protect your career and help you win reviews, interviews, and tough conversations.</p>
+            <div class="cta-buttons">
+                <a href="<REPLACE_WITH_BOOKING_URL>" class="btn-primary" aria-label="Book a 30-minute HR prep call for $149">Book a 30-Minute HR Prep Call ($149)</a>
+                <a href="<REPLACE_WITH_WAITLIST_URL>" class="btn-secondary" aria-label="Join the waitlist">Join the Waitlist</a>
+            </div>
+            <p class="micro-trust">Paid calls only. Limited weekly slots to protect quality.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Enemy Statement Section -->
+            <section class="section">
+                <h2>Forget the myths. Here is how HR decisions actually get made.</h2>
+                <div class="enemy-statement">
+                    <p>Policy. Precedent. Risk. That is the real decision lens. I share the insider logic so you can prepare smarter and speak with confidence.</p>
+                </div>
+            </section>
+
+            <!-- Value Bullets -->
+            <section class="section">
+                <div class="value-bullets">
+                    <div class="bullet">
+                        <h4>Interview and review prep with real HR logic</h4>
+                        <p>Get the actual frameworks HR uses to evaluate candidates and employees, not the generic advice you find everywhere.</p>
+                    </div>
+                    <div class="bullet">
+                        <h4>Scripts and phrases that actually work</h4>
+                        <p>Learn the exact language that gets results in difficult conversations, performance reviews, and salary negotiations.</p>
+                    </div>
+                    <div class="bullet">
+                        <h4>Insider advice without corporate jargon</h4>
+                        <p>Straight talk about how HR really works, what they're thinking, and how to navigate the system effectively.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Proof -->
+            <section class="section">
+                <div class="social-proof">
+                    <h3>Wins from the community</h3>
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <p>"Finally got the raise I deserved after learning the right approach. The scripts were game-changing."</p>
+                            <div class="author">- S.M.</div>
+                        </div>
+                        <div class="testimonial">
+                            <p>"Nailed my performance review after understanding how HR actually thinks. Completely different outcome."</p>
+                            <div class="author">- J.R.</div>
+                        </div>
+                        <div class="testimonial">
+                            <p>"The interview prep was unlike anything I'd seen before. Got the job and negotiated a better package."</p>
+                            <div class="author">- A.L.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secondary CTA -->
+            <section class="section">
+                <h2>Ready to get the real HR playbook</h2>
+                <div class="cta-buttons">
+                    <a href="<REPLACE_WITH_BOOKING_URL>" class="btn-primary" aria-label="Book a 30-minute HR prep call for $149">Book a 30-Minute HR Prep Call ($149)</a>
+                    <a href="<REPLACE_WITH_WAITLIST_URL>" class="btn-secondary" aria-label="Join the waitlist">Join the Waitlist</a>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="section">
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Is this legal advice</summary>
+                            <p>No. This is educational HR coaching. Laws vary by state and country. For legal advice, talk to a lawyer.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Who is this for</summary>
+                            <p>Employees and job seekers who want clear, practical HR guidance for reviews, interviews, and tricky situations.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>What happens in a 30-minute call</summary>
+                            <p>We focus on your top three issues. You leave with a one-page plan and exact phrases to use.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Do you offer refunds</summary>
+                            <p>Calls are non-refundable once delivered. If a booking issue occurs, we will make it right.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>What if I am not ready to book</summary>
+                            <p>Join the waitlist. You will get one practical tip and a reminder when new call slots open.</p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <nav class="footer-nav" role="navigation" aria-label="Footer navigation">
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy Policy</a>
+            </nav>
+            <p class="disclaimer">Educational HR coaching. Not legal advice. Contexts vary by state and country; consult counsel for legal advice.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
