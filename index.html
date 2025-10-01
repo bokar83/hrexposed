@@ -174,9 +174,18 @@
         }
         
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--accent-primary);
+        }
+        
+        .logo img {
+            height: 32px;
+            width: 32px;
+            object-fit: contain;
         }
         
         .header-cta {
@@ -581,6 +590,15 @@
                 font-size: 1rem;
             }
             
+            .logo img {
+                height: 28px;
+                width: 28px;
+            }
+            
+            .logo {
+                font-size: 1.25rem;
+            }
+            
             .enemy-statement {
                 padding: 2rem 1.5rem;
             }
@@ -639,7 +657,10 @@
     <header role="banner">
         <div class="container">
             <div class="header-content">
-                <div class="logo">HR Exposed</div>
+                <div class="logo">
+                    <img src="assets/hrExposed-logo.png" alt="HR Exposed Logo">
+                    HR Exposed
+                </div>
                 <div class="header-right">
                     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
                     <a href="<REPLACE_WITH_BOOKING_URL>" class="header-cta" aria-label="Book a 30-minute HR prep call">Book a Call</a>
