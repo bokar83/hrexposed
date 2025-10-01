@@ -92,11 +92,34 @@
             scroll-behavior: smooth;
         }
         
+        :root {
+            --bg-primary: #F3F6F9;
+            --bg-secondary: #071A2E;
+            --bg-card: white;
+            --text-primary: #1E222A;
+            --text-secondary: #F3F6F9;
+            --accent-primary: #00B7C2;
+            --accent-secondary: #FF7A00;
+            --border-color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #1E222A;
+            --bg-secondary: #071A2E;
+            --bg-card: #2A2F3A;
+            --text-primary: #F3F6F9;
+            --text-secondary: #1E222A;
+            --accent-primary: #00B7C2;
+            --accent-secondary: #FF7A00;
+            --border-color: #404040;
+        }
+        
         body {
             font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #1E222A;
-            background-color: #F3F6F9;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         /* Container */
@@ -108,12 +131,13 @@
         
         /* Header */
         header {
-            background: #071A2E;
-            color: #F3F6F9;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            transition: background-color 0.3s ease;
         }
         
         .header-content {
@@ -122,10 +146,37 @@
             align-items: center;
         }
         
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid #00B7C2;
+            color: #00B7C2;
+            padding: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            background: #00B7C2;
+            color: #071A2E;
+        }
+        
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #00B7C2;
+            color: var(--accent-primary);
         }
         
         .header-cta {
@@ -296,16 +347,17 @@
         }
         
         .enemy-statement {
-            background: white;
+            background: var(--bg-card);
             padding: 3rem 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 3rem;
+            transition: background-color 0.3s ease;
         }
         
         .enemy-statement p {
             font-size: 1.2rem;
-            color: #1E222A;
+            color: var(--text-primary);
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
@@ -319,30 +371,32 @@
         }
         
         .bullet {
-            background: white;
+            background: var(--bg-card);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: background-color 0.3s ease;
         }
         
         .bullet h4 {
             font-size: 1.5rem;
-            color: #00B7C2;
+            color: var(--accent-primary);
             margin-bottom: 1rem;
         }
         
         .bullet p {
-            color: #1E222A;
+            color: var(--text-primary);
             font-size: 1.1rem;
         }
         
         /* Social Proof */
         .social-proof {
-            background: white;
+            background: var(--bg-card);
             padding: 3rem 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
         
         .testimonials {
@@ -362,37 +416,40 @@
         .testimonial p {
             font-style: italic;
             margin-bottom: 1rem;
-            color: #1E222A;
+            color: var(--text-primary);
         }
         
         .testimonial .author {
             font-weight: 600;
-            color: #00B7C2;
+            color: var(--accent-primary);
         }
         
         /* FAQ Section */
         .faq {
-            background: white;
+            background: var(--bg-card);
             padding: 3rem 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
         
         .faq-item {
             margin-bottom: 1rem;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
+            transition: border-color 0.3s ease;
         }
         
         .faq-item summary {
             padding: 1.5rem;
-            background: #F3F6F9;
+            background: var(--bg-primary);
             cursor: pointer;
             font-weight: 600;
-            color: #071A2E;
+            color: var(--text-primary);
             list-style: none;
             position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .faq-item summary::after {
@@ -402,7 +459,7 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 1.5rem;
-            color: #00B7C2;
+            color: var(--accent-primary);
         }
         
         .faq-item[open] summary::after {
@@ -415,16 +472,17 @@
         
         .faq-item p {
             padding: 1.5rem;
-            color: #1E222A;
+            color: var(--text-primary);
             line-height: 1.6;
         }
         
         /* Footer */
         footer {
-            background: #071A2E;
-            color: #F3F6F9;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
             padding: 3rem 0 2rem;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
         
         .footer-nav {
@@ -432,14 +490,14 @@
         }
         
         .footer-nav a {
-            color: #00B7C2;
+            color: var(--accent-primary);
             text-decoration: none;
             margin: 0 1rem;
             transition: color 0.2s ease;
         }
         
         .footer-nav a:hover {
-            color: #F3F6F9;
+            color: var(--text-secondary);
         }
         
         .disclaimer {
@@ -451,45 +509,98 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
+                line-height: 1.1;
             }
             
             .hero p {
                 font-size: 1.1rem;
+                margin-bottom: 2rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 0.75rem;
             }
             
             .btn-primary,
             .btn-secondary {
                 width: 100%;
-                max-width: 300px;
+                max-width: 320px;
                 text-align: center;
+                padding: 1rem 1.5rem;
             }
             
             .section h2 {
                 font-size: 2rem;
+                line-height: 1.2;
             }
             
             .section h3 {
                 font-size: 1.5rem;
+                line-height: 1.3;
             }
             
             .value-bullets {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            .bullet {
+                padding: 1.5rem;
             }
             
             .testimonials {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
             .header-content {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 1rem;
+            }
+            
+            .header-right {
+                gap: 0.75rem;
+            }
+            
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            
+            .enemy-statement {
+                padding: 2rem 1.5rem;
+            }
+            
+            .social-proof {
+                padding: 2rem 1.5rem;
+            }
+            
+            .faq {
+                padding: 2rem 1.5rem;
+            }
+            
+            .faq-item summary {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
+            
+            .faq-item p {
+                padding: 1.25rem;
+                font-size: 0.95rem;
             }
 
             .email-form {
@@ -529,7 +640,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">HR Exposed</div>
-                <a href="<REPLACE_WITH_BOOKING_URL>" class="header-cta" aria-label="Book a 30-minute HR prep call">Book a Call</a>
+                <div class="header-right">
+                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">🌙</button>
+                    <a href="<REPLACE_WITH_BOOKING_URL>" class="header-cta" aria-label="Book a 30-minute HR prep call">Book a Call</a>
+                </div>
             </div>
         </div>
     </header>
@@ -664,6 +778,38 @@
             <p class="disclaimer">Educational HR coaching. Not legal advice. Contexts vary by state and country; consult counsel for legal advice.</p>
         </div>
     </footer>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+            } else {
+                themeToggle.textContent = '🌙';
+            }
+        });
+    </script>
 </body>
 </html>
 
